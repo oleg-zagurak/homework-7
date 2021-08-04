@@ -1,0 +1,21 @@
+<main>
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Date</th>
+      <th>Category</th>
+      <th>Expirition date</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products"
+      [ngClass] = "{'warn':product.warn,'end':product.end}">
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.date }}</td>
+        <td>{{ product.category }}</td>
+        <td>{{ product.expirationDate }}</td>
+      </tr>
+    </tbody>
+  </table>
+</main>
